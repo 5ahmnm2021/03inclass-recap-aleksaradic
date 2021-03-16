@@ -1,24 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class addNumbers : MonoBehaviour
+public class AddNumbers : MonoBehaviour
 {
     public InputField num1_if;
     public InputField num2_if;
     
-    public float num1;
-    public float num2;
-    
     public Text result;
     
-    bool bool1 = false;
-    bool bool2 = false;
+    bool bool1;
+    bool bool2;
 
     public void AddNumbersOnClick()
-    {
-     try
+    {        
+        float num1 = 0;
+        float num2 = 0;
+
+        //----------first Try and Catch----------
+
+        try
         {
             num1 = float.Parse(num1_if.text);
             bool1 = true;
@@ -28,6 +28,8 @@ public class addNumbers : MonoBehaviour
             num1_if.image.color = new Color32(255,0,0,100);
             bool1 = false;
         }
+
+        //----------second Try and Catch----------
 
         try
         {
@@ -39,15 +41,17 @@ public class addNumbers : MonoBehaviour
             num2_if.image.color = new Color32(255,0,0,100);
             bool2 = false;
         }
-        
-        if (bool1 == true | bool2 == true)
+
+        //----------ifStatement and Result Addition----------
+
+        if (bool1 && bool2)
         {
             float addResult = num1 + num2;
             result.text = addResult.ToString();
         }
         else
         {
-            result.text = "Ohjee";
+            result.text = "Ohje";
         }
     }
 }

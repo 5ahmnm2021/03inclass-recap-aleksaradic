@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class sceneLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     public void LoadColorScene()
     {

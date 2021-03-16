@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class colorChanger : MonoBehaviour
+public class ColorChanger : MonoBehaviour
 {
     public GameObject color;
 
