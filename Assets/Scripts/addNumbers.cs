@@ -14,7 +14,7 @@ public class addNumbers : MonoBehaviour
     public Text result;
     
     bool bool1 = false;
-    public bool bool2 = false;
+    bool bool2 = false;
 
     public void AddNumbersOnClick()
     {
@@ -47,7 +47,7 @@ public class addNumbers : MonoBehaviour
         }
         else
         {
-            result.text = "Wrong input";
+            result.text = "Ohjee";
         }
     }
 }
