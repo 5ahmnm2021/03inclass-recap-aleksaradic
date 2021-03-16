@@ -17,6 +17,8 @@ public class ColorChanger : MonoBehaviour
             new Color32(102,47,84,100)
         };
 
+        //----------Change Color on Space Click----------
+
         if (Input.GetKeyDown("space"))
         {
             color.GetComponent<Image>().color = colors[Random.Range(0, colors.Length)];

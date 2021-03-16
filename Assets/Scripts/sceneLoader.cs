@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void LoadWelcomeScene()
+    {
+        SceneManager.LoadScene("00welcomeScene");
+    }
+    
     public void LoadColorScene()
     {
         SceneManager.LoadScene("01colorScene");
@@ -13,10 +18,5 @@ public class SceneLoader : MonoBehaviour
     public void LoadNumberScene()
     {
         SceneManager.LoadScene("02numberScene");
-    }
-
-    public void LoadWelcomeScene()
-    {
-        SceneManager.LoadScene("00welcomeScene");
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class AddNumbers : MonoBehaviour
@@ -27,6 +28,7 @@ public class AddNumbers : MonoBehaviour
         {
             num1_if.image.color = new Color32(255,0,0,100);
             bool1 = false;
+            StartCoroutine(BackToNormal());
         }
 
         //----------second Try and Catch----------
@@ -40,6 +42,7 @@ public class AddNumbers : MonoBehaviour
         {
             num2_if.image.color = new Color32(255,0,0,100);
             bool2 = false;
+            StartCoroutine(BackToNormal());
         }
 
         //----------ifStatement and Result Addition----------
@@ -52,6 +55,20 @@ public class AddNumbers : MonoBehaviour
         else
         {
             result.text = "Ohje";
+        }
+        
+        //----------Coroutine which changes everything back to normal----------
+        
+        IEnumerator BackToNormal()
+        {
+        yield return new WaitForSeconds(2);
+
+        num2_if.image.color = new Color32(255,255,255,100);
+        num1_if.image.color = new Color32(255,255,255,100);
+
+        result.text = "...";
+        num1_if.text = "";
+        num2_if.text = "";
         }
     }
 }
