@@ -1285,7 +1285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num1_if: {fileID: 2010833244}
   num2_if: {fileID: 95952692}
+  num1: 0
+  num2: 0
   result: {fileID: 1620037038}
+  bool2: 0
 --- !u!4 &1426769624
 Transform:
   m_ObjectHideFlags: 0

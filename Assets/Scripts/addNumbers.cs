@@ -7,52 +7,47 @@ public class addNumbers : MonoBehaviour
 {
     public InputField num1_if;
     public InputField num2_if;
+    
+    public float num1;
+    public float num2;
+    
     public Text result;
     
-    float num1;
-    float num2;
-
-    bool bool_if1;
-    bool bool_if2;
+    bool bool1 = false;
+    public bool bool2 = false;
 
     public void AddNumbersOnClick()
     {
-        try
+     try
         {
-            float num1 = float.Parse(num1_if.text);
-            bool bool_if1 = true;
-            //Debug.Log("Try1 geht");
+            num1 = float.Parse(num1_if.text);
+            bool1 = true;
         }
         catch (System.Exception)
         {
             num1_if.image.color = new Color32(255,0,0,100);
-            bool bool_if1 = false;
-            //Debug.Log("Catch1 geht");
+            bool1 = false;
         }
 
         try
         {
-            float num2 = float.Parse(num2_if.text);
-            bool bool_if2 = true;
-            //Debug.Log("Try2 geht");
+            num2 = float.Parse(num2_if.text);
+            bool2 = true;
         }
         catch (System.Exception)
         {
             num2_if.image.color = new Color32(255,0,0,100);
-            bool bool_if2 = false;
-            //Debug.Log("Catch1 geht");
+            bool2 = false;
         }
         
-        if (bool_if1 == true | bool_if2 == true)
+        if (bool1 == true | bool2 == true)
         {
             float addResult = num1 + num2;
             result.text = addResult.ToString();
-            //Debug.Log("Beide Stimmen");
         }
         else
         {
-            result.text = "Ohje";
-            //Debug.Log("Ohje kommt");
+            result.text = "Wrong input";
         }
     }
 }
